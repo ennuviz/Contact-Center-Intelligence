@@ -1,0 +1,687 @@
+﻿{
+  "Metadata": {
+    "Id": "33daaea6-25c1-474c-b9fe-6f7c2d5eaf98",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "Service Order Form",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "tag": "h3",
+        "content": "<div style = \"text-align: center;\">\n  <B>SERVICE ORDER FORM</B>\n  </div>",
+        "key": "label",
+        "input": false,
+        "tableView": false,
+        "label": "Label",
+        "type": "label"
+      },
+      {
+        "collapsible": false,
+        "hideLabel": true,
+        "key": "panel",
+        "type": "panel",
+        "label": "Panel",
+        "input": false,
+        "tableView": false,
+        "components": [
+          {
+            "label": "<p><b>Select a Service</b></p>",
+            "optionsLabelPosition": "right",
+            "inline": false,
+            "disabled": true,
+            "tableView": false,
+            "values": [
+              {
+                "label": "Change of Beneficiary",
+                "value": "Beneficiary",
+                "shortcut": ""
+              },
+              {
+                "label": "Change of Address",
+                "value": "Address",
+                "shortcut": ""
+              },
+              {
+                "label": "Refund & Return",
+                "value": "Refund",
+                "shortcut": ""
+              }
+            ],
+            "key": "selectAService",
+            "type": "radio",
+            "input": true
+          }
+        ]
+      },
+      {
+        "columns": [
+          {
+            "components": [
+              {
+                "title": "Change of Beneficiary",
+                "theme": "info",
+                "collapsible": false,
+                "key": "changeOfBeneficiary",
+                "conditional": {
+                  "show": true,
+                  "when": "selectAService",
+                  "eq": "Beneficiary"
+                },
+                "type": "panel",
+                "label": "Panel",
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "<b>Reason for Change</b>",
+                    "tableView": true,
+                    "key": "ReasonForChange_Ben",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>Current Beneficiary</b>",
+                    "tableView": true,
+                    "key": "CurrentBeneficiary",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>New Beneficiary First Name</b>",
+                    "tableView": true,
+                    "key": "NewBeneficiaryFirstName",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>New Beneficiary Last Name</b>",
+                    "tableView": true,
+                    "key": "NewBeneficiaryLastName",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>SSN</b>(last 4 digits)",
+                    "tableView": true,
+                    "key": "SsnLast4Digits",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>DOB</b>",
+                    "tableView": true,
+                    "key": "bDobB",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>ID Proof</b>",
+                    "tableView": true,
+                    "key": "bIdProofB",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>DL/Passport</b>",
+                    "tableView": true,
+                    "key": "DlPassport_Ben",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>Effective Date</b>",
+                    "tableView": true,
+                    "key": "EffectiveDate",
+                    "type": "textfield",
+                    "input": true
+                  }
+                ]
+              },
+              {
+                "title": "Change of Address",
+                "theme": "info",
+                "collapsible": false,
+                "key": "changeOfAddress",
+                "conditional": {
+                  "show": true,
+                  "when": "selectAService",
+                  "eq": "Address"
+                },
+                "type": "panel",
+                "label": "Panel",
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "<b>Reason for Change</b>",
+                    "tableView": true,
+                    "key": "ReasonForChange_Adrs",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>Street</b>",
+                    "tableView": true,
+                    "key": "Street",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>City</b>",
+                    "tableView": true,
+                    "key": "City",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>State</b>",
+                    "tableView": true,
+                    "key": "State",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>Country</b>",
+                    "tableView": true,
+                    "key": "Country",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>Zip</b>",
+                    "tableView": true,
+                    "key": "Zip",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>Select a Address Proof Type</b>",
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Driver Licence",
+                          "value": "driverLicence"
+                        },
+                        {
+                          "label": "Passport",
+                          "value": "passport"
+                        },
+                        {
+                          "label": "UPUS",
+                          "value": "upus"
+                        }
+                      ]
+                    },
+                    "key": "ProofType",
+                    "type": "select",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>Validation Status</b>",
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Validated",
+                          "value": "validated"
+                        },
+                        {
+                          "label": "Agent Reviewed",
+                          "value": "agentReviewed"
+                        },
+                        {
+                          "label": "Denied",
+                          "value": "denied"
+                        }
+                      ]
+                    },
+                    "key": "ValidationStatus",
+                    "type": "select",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>Address Proof</b>",
+                    "hidden": true,
+                    "tableView": true,
+                    "key": "AddressProof",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>DL/Passport</b>",
+                    "hidden": true,
+                    "tableView": true,
+                    "key": "DlPassport-adrs",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>USPS</b> - Change Address",
+                    "hidden": true,
+                    "tableView": true,
+                    "key": "UpusChangeAddress",
+                    "type": "textarea",
+                    "input": true
+                  }
+                ]
+              },
+              {
+                "title": "Refund & Return",
+                "theme": "info",
+                "collapsible": false,
+                "key": "refundReturn",
+                "conditional": {
+                  "show": true,
+                  "when": "selectAService",
+                  "eq": "Refund"
+                },
+                "type": "panel",
+                "label": "Panel",
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "<b>Reason of Change</b>",
+                    "tableView": true,
+                    "key": "ReasonOfChange_RR",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>Product Name</b>",
+                    "tableView": true,
+                    "key": "ProductName",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>Pick up Date</b>",
+                    "tableView": true,
+                    "key": "PickUpDate",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>Purchase Date</b>",
+                    "tableView": true,
+                    "key": "PurchaseDate",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>Contact Number</b>",
+                    "tableView": true,
+                    "key": "ContactNumber",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "<b>Refund Amount</b>",
+                    "tableView": true,
+                    "key": "RefundAmount",
+                    "type": "textfield",
+                    "input": true
+                  }
+                ]
+              }
+            ],
+            "offset": 0,
+            "push": 0,
+            "pull": 0,
+            "size": "md",
+            "currentWidth": 6,
+            "width": 6
+          },
+          {
+            "components": [
+              {
+                "title": "Revised Beneficiary Details",
+                "theme": "success",
+                "collapsible": false,
+                "key": "revisedBeneficiaryDetails",
+                "conditional": {
+                  "show": true,
+                  "when": "selectAService",
+                  "eq": "Beneficiary"
+                },
+                "type": "panel",
+                "label": "Panel",
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "Ticket Number",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "ticketNumber_ben",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Reason for Change",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "Updt-ReasonForChange_Ben",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "New Beneficiary Name",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "newBeneficiaryName",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Updated SSN",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "updatedSsn",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Updated DOB",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "updatedDob",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Updated ID",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "updatedId",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Updated DL/Passport",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "updatedDlPassport_ben",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Effective Date",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "EffectiveDate_up",
+                    "type": "textfield",
+                    "input": true
+                  }
+                ]
+              },
+              {
+                "title": "Revised Address Details",
+                "theme": "success",
+                "collapsible": false,
+                "key": "revisedAddressDetails",
+                "conditional": {
+                  "show": true,
+                  "when": "selectAService",
+                  "eq": "Address"
+                },
+                "type": "panel",
+                "label": "Panel",
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "Ticket Number",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "ticketNumber_adrs",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Old Address",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "oldaddress",
+                    "type": "textarea",
+                    "input": true
+                  },
+                  {
+                    "label": "Reason for Change",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "Update-ReasonForChange_adrs",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Updated Street",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "updatedStreet",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Updated City",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "updatedCity",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Updated State",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "updatedState",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Updated Country",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "updatedCountry",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Updated Zip Code",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "updatedZipCode",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Selected Address Proof Type",
+                    "widget": "choicesjs",
+                    "disabled": true,
+                    "tableView": true,
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Driver Licence",
+                          "value": "driverLicence"
+                        },
+                        {
+                          "label": "Passport",
+                          "value": "passport"
+                        },
+                        {
+                          "label": "UPUS",
+                          "value": "upus"
+                        }
+                      ]
+                    },
+                    "key": "up_ProofType",
+                    "type": "select",
+                    "input": true
+                  },
+                  {
+                    "label": "Validation Status",
+                    "widget": "choicesjs",
+                    "disabled": true,
+                    "tableView": true,
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Validated",
+                          "value": "validated"
+                        },
+                        {
+                          "label": "Agent Reviewed",
+                          "value": "agentReviewed"
+                        },
+                        {
+                          "label": "Denied",
+                          "value": "denied"
+                        }
+                      ]
+                    },
+                    "key": "up_ValidationStatus",
+                    "type": "select",
+                    "input": true
+                  },
+                  {
+                    "label": "Address Proof",
+                    "hidden": true,
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "addressProof-Updated",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Updated DL/Passport",
+                    "hidden": true,
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "updatedDlPassport_adrs",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Updated USPS",
+                    "hidden": true,
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "updateUpus",
+                    "type": "textarea",
+                    "input": true
+                  }
+                ]
+              },
+              {
+                "title": "Revised Refund Details",
+                "theme": "success",
+                "collapsible": false,
+                "key": "revisedRefundDetails",
+                "conditional": {
+                  "show": true,
+                  "when": "selectAService",
+                  "eq": "Refund"
+                },
+                "type": "panel",
+                "label": "Panel",
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "Ticket Number",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "ticketNumber_RR",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Reason for Change",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "Update-ReasonForChange_RR",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Refund Product",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "refundProduct",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Return Pick up Date",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "returnPickUpDate",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Contact Number",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "contactNumber-Up",
+                    "type": "textfield",
+                    "input": true
+                  },
+                  {
+                    "label": "Amount to be Refunded",
+                    "disabled": true,
+                    "tableView": true,
+                    "key": "amountToBeRefunded",
+                    "type": "textfield",
+                    "input": true
+                  }
+                ]
+              }
+            ],
+            "width": 6,
+            "offset": 0,
+            "push": 0,
+            "pull": 0,
+            "size": "md",
+            "currentWidth": 6
+          }
+        ],
+        "key": "columns",
+        "type": "columns",
+        "input": false,
+        "tableView": false,
+        "label": "Columns"
+      },
+      {
+        "label": "Close",
+        "action": "event",
+        "showValidations": false,
+        "tableView": false,
+        "key": "close",
+        "type": "button",
+        "input": true
+      },
+      {
+        "label": "Submit",
+        "showValidations": false,
+        "hidden": true,
+        "disabled": true,
+        "tableView": false,
+        "key": "submit",
+        "type": "button",
+        "saveOnEnter": false,
+        "input": true
+      }
+    ]
+  }
+}

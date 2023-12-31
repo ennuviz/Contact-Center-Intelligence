@@ -1,0 +1,7 @@
+12/12/2023 21:53:12           -CCICheckEmailBOT: Started
+12/12/2023 21:53:15          -CCI Email bot: Reading New Email
+12/12/2023 21:53:38          -CCICheckEmailBOT: Successfully Deteched Service Type
+12/12/2023 21:53:59          -CCICheckEmailBOT: Deteched Driver License as Proof of Address and Digitized Successfully 
+12/12/2023 21:54:06          -CCICheckEmailBOT: Successful Perform Pre-verification step 
+12/12/2023 21:54:40          -CCICheckEmailBOT: New Service Now Ticket Created Successfully 
+12/12/2023 21:55:25          -CCICheckEmailBOT: Customer Email Notification Send Successfully 
